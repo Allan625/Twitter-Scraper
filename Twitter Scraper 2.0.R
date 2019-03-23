@@ -31,7 +31,7 @@ options(httr_oauth_cache=TRUE)
 setup_twitter_oauth(consumer_key = consumerKey, consumer_secret = consumerSecret,
                     access_token = accessToken, access_secret = accessSecret)
 
-#3.1) Scrape a user's tweets 
+#3) Scrape a user's tweets 
 obamatweets<- userTimeline("potus44", n = 3200)
 
 obamatweets_df <- tbl_df(map_df(obamatweets, as.data.frame))
